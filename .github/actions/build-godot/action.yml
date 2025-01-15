@@ -58,7 +58,7 @@ runs:
         if [[ ${{ inputs.buildroot  != '' }} ]]; then
           echo "Using buildroot at ${{ inputs.buildroot }}"
         fi
-        ${{ inputs.buildroot != '' && format('PATH={0}:$PATH', inputs.buildroot) || '' }} scons p=${{ inputs.platform }} production=yes target=${{ inputs.target }} tests=${{ inputs.tests }} ${{ env.SCONSFLAGS }}
+        ${{ inputs.buildroot != '' && format('PATH={0}:$PATH', inputs.buildroot) || '' }} scons p=${{ inputs.platform }} production=yes precision=double target=${{ inputs.target }} tests=${{ inputs.tests }} ${{ env.SCONSFLAGS }}
         ls -l bin/
 
     - name: Rename Export
