@@ -104,7 +104,7 @@ jobs:
           submodules: true
 
       - name: Get Godot-CPP 4.1 (For Godot 4.1-4.2)
-        if: ${{ inputs.godot_cpp_version == '4.1' }}
+        if: ${{ inputs.godot_cpp_version == '4.3' }}
         shell: sh
         run: |
           git submodule update --init --recursive
