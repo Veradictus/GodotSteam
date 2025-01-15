@@ -30,24 +30,28 @@ jobs:
             target: template_debug
             platform: linux
             arch: x86_64
+            precision: double
           - identifier: linux-release (x86_64)
             name: Linux (x86_64) - template_release
             runner: ubuntu-20.04
             target: template_release
             platform: linux
             arch: x86_64
+            precision: double
           - identifier: linux-debug (x86_32)
             name: Linux (x86_32) - template_debug
             runner: ubuntu-20.04
             target: template_debug
             platform: linux
             arch: x86_32
+            precision: double
           - identifier: linux-release (x86_32)
             name: Linux (x86_32) - template_release
             runner: ubuntu-20.04
             target: template_release
             platform: linux
             arch: x86_32
+            precision: double
 
           - identifier: windows-debug (x86_64)
             name: Windows (x86_64) - template_debug
@@ -55,24 +59,28 @@ jobs:
             target: template_debug
             platform: windows
             arch: x86_64
+            precision: double
           - identifier: windows-release (x86_64)
             name: Windows (x86_64) - template_release
             runner: windows-latest
             target: template_release
             platform: windows
             arch: x86_64
+            precision: double
           - identifier: windows-debug (x86_32)
             name: Windows (x86_32) - template_debug
             runner: windows-latest
             target: template_debug
             platform: windows
             arch: x86_32
+            precision: double
           - identifier: windows-release (x86_32)
             name: Windows (x86_32) - template_release
             runner: windows-latest
             target: template_release
             platform: windows
             arch: x86_32
+            precision: double
 
           - identifier: macos-release (universal)
             name: MacOS (universal) - template_release
@@ -80,12 +88,14 @@ jobs:
             target: template_release
             platform: macos
             arch: universal
+            precision: double
           - identifier: macos-debug (universal)
             name: MacOS (universal) - template_debug
             runner: macos-latest
             target: template_debug
             platform: macos
             arch: universal
+            precision: double
 
     steps:
       - name: Checkout project
