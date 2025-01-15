@@ -195,7 +195,7 @@ jobs:
           SCONS_CACHE: ${{github.workspace}}/.scons_cache/
           SCONS_CACHE_LIMIT: 7168
         run: |
-          PATH=/opt/buildroot/bin:$PATH scons target='${{ matrix.opts.target }}' platform='${{ matrix.opts.platform }}' arch='${{ matrix.opts.arch }}' ${{ matrix.opts.args }} -j2
+          PATH=/opt/buildroot/bin:$PATH scons target='${{ matrix.opts.target }}' precision=double platform='${{ matrix.opts.platform }}' arch='${{ matrix.opts.arch }}' ${{ matrix.opts.args }} -j2
           ls -la bin/
 
       - name: Strip bins
